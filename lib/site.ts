@@ -7,7 +7,7 @@ export const siteConfig = {
     "QA Engineer specializing in thoughtful test strategy, reliable releases, and user-centered software quality.",
   // This fallback makes metadata work before a custom domain is connected.
   url: process.env.NEXT_PUBLIC_SITE_URL ?? (deploymentHost ? `https://${deploymentHost}` : "https://example.com"),
-  email: "",
+  email: "eduvigisgarcia88@gmail.com",
   linkedin: "https://www.linkedin.com/",
   github: "https://github.com/",
   resume: "/resume/Eduvigis-Garcia-Resume.pdf",
