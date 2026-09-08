@@ -6,6 +6,7 @@ html { scroll-behavior: smooth; }
 body { margin:0; background:var(--cream); color:var(--ink); font-family:var(--font-body),sans-serif; overflow-x:hidden; }
 a { color:inherit; text-decoration:none; }
 button { font:inherit; }
+:focus-visible { outline:3px solid var(--orange); outline-offset:3px; }
 ::selection { background:var(--mint); color:var(--ink); }
 .display { font-family:var(--font-display),sans-serif; letter-spacing:-.045em; }
 .container { width:min(1180px, calc(100% - 40px)); margin-inline:auto; }
@@ -18,5 +19,17 @@ button { font:inherit; }
 .button-primary { background:var(--ink); color:white; }
 .button-accent { background:var(--mint); color:var(--ink); }
 .grid-lines { background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px); background-size:52px 52px; }
+.nav-link { position:relative; padding:28px 0 25px; font-size:.76rem; font-weight:800; transition:opacity .2s ease; }
+.nav-link::after { content:""; position:absolute; inset:auto 0 18px; height:2px; background:var(--orange); transform:scaleX(0); transition:transform .2s ease; }
+.nav-link:hover { opacity:.58; }
+.nav-link-active::after { transform:scaleX(1); }
+.case-card,.experience-card,.skill-card { display:flex; flex-direction:column; border:1px solid var(--line); border-radius:1.5rem; background:white; padding:clamp(1.5rem,3vw,2.5rem); }
+.case-card { min-height:330px; transition:transform .2s ease,box-shadow .2s ease; }
+.case-card:hover { transform:translateY(-3px); box-shadow:0 12px 0 rgba(11,38,35,.08); }
+.detail-title { font-size:.72rem; font-weight:900; letter-spacing:.14em; text-transform:uppercase; color:var(--orange); }
+.check-list { display:grid; gap:.8rem; }
+.check-list li { position:relative; padding-left:1.75rem; line-height:1.6; }
+.check-list li::before { content:"✓"; position:absolute; left:0; top:0; font-weight:900; color:var(--orange); }
+section[id],footer[id] { scroll-margin-top:76px; }
 @media (max-width: 760px) { .container{width:min(100% - 28px,1180px)} .section{padding:78px 0} }
 @media (prefers-reduced-motion: reduce) { html{scroll-behavior:auto} *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important} }
