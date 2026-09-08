@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { siteConfig } from "@/lib/site";
 import { MotionEffects } from "@/components/MotionEffects";
 import { ChatWidget } from "@/components/ChatWidget";
+import { SiteIntro } from "@/components/SiteIntro";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -28,5 +29,5 @@ export const metadata: Metadata = {
 export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#071b19" };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body><MotionEffects/>{children}<ChatWidget/></body></html>;
+  return <html lang="en"><body><SiteIntro/><MotionEffects/>{children}<ChatWidget/></body></html>;
 }
