@@ -1,12 +1,10 @@
-const deploymentHost = process.env.VERCEL_PROJECT_PRODUCTION_URL;
-
 export const siteConfig = {
   name: "Eduvigis Garcia",
   title: "QA Engineer & Software Tester",
   description:
     "QA Engineer specializing in thoughtful test strategy, reliable releases, and user-centered software quality.",
-  // This fallback makes metadata work before a custom domain is connected.
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? (deploymentHost ? `https://${deploymentHost}` : "https://example.com"),
+  // Override this with NEXT_PUBLIC_SITE_URL when connecting a future custom domain.
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://eduvigis-garcia.vercel.app",
   email: "eduvigisgarcia88@gmail.com",
   linkedin: "https://www.linkedin.com/in/eduvigis-garcia/",
   github: "https://github.com/",
