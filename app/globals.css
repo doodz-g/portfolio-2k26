@@ -26,6 +26,9 @@ button { font:inherit; }
 .case-card,.experience-card,.skill-card { display:flex; flex-direction:column; border:1px solid var(--line); border-radius:1.5rem; background:white; padding:clamp(1.5rem,3vw,2.5rem); }
 .case-card { min-height:330px; transition:transform .2s ease,box-shadow .2s ease; }
 .case-card:hover { transform:translateY(-3px); box-shadow:0 12px 0 rgba(11,38,35,.08); }
+.case-detail-container { width:min(860px,calc(100% - 40px)); margin-inline:auto; }
+.case-detail-section { padding:3rem 0; border-bottom:1px solid var(--line); }
+.case-detail-copy { max-width:760px; }
 .detail-title { font-size:.72rem; font-weight:900; letter-spacing:.14em; text-transform:uppercase; color:var(--orange); }
 .check-list { display:grid; gap:.8rem; }
 .check-list li { position:relative; padding-left:1.75rem; line-height:1.6; }
