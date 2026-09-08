@@ -32,6 +32,17 @@ button { font:inherit; }
 .finding-card { border:1px solid var(--line); border-left-width:5px; border-radius:1rem; background:white; padding:clamp(1.25rem,3vw,2rem); }
 .finding-defect { border-left-color:var(--orange); }
 .finding-risk { border-left-color:#b08a16; }
+.project-detail-container { width:min(1120px,calc(100% - 40px)); margin-inline:auto; }
+.project-card { transition:transform .25s ease,box-shadow .25s ease; }
+.project-card:hover { transform:translateY(-4px); box-shadow:0 14px 0 rgba(11,38,35,.09); }
+.project-placeholder { display:grid; width:100%; height:100%; place-items:center; overflow:hidden; border:1px solid var(--line); background-color:#e8eee5; background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px); background-size:32px 32px; padding:1.5rem; text-align:center; }
+.browser-frame { width:min(88%,520px); border:2px solid var(--ink); border-radius:1rem; background:var(--cream); padding:2.5rem 1.25rem 2rem; box-shadow:8px 8px 0 var(--ink); position:relative; }
+.browser-frame::before { content:"•••"; position:absolute; inset:.35rem auto auto .8rem; color:var(--orange); letter-spacing:.2em; }
+.phone-frame { width:min(62%,220px); border:3px solid var(--ink); border-radius:2rem; background:var(--cream); padding:2.5rem 1rem; box-shadow:8px 8px 0 var(--ink); }
+.placeholder-icon { margin:auto; display:grid; width:2.8rem; height:2.8rem; place-items:center; border-radius:50%; background:var(--mint); }
+.architecture-flow { display:flex; flex-direction:column; align-items:center; gap:.75rem; width:100%; }
+.architecture-node { display:grid; width:100%; gap:.2rem; border:1px solid var(--line); border-radius:.75rem; background:white; padding:1rem; text-align:center; }
+.architecture-node span { color:var(--orange); font-size:.65rem; font-weight:900; letter-spacing:.14em; text-transform:uppercase; }
 .detail-title { font-size:.72rem; font-weight:900; letter-spacing:.14em; text-transform:uppercase; color:var(--orange); }
 .check-list { display:grid; gap:.8rem; }
 .check-list li { position:relative; padding-left:1.75rem; line-height:1.6; }

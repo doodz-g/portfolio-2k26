@@ -1,0 +1,4 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDisplay,faMobileScreenButton } from "@fortawesome/free-solid-svg-icons";
+
+export function ProjectImagePlaceholder({projectName,projectType,compact=false}:{projectName:string;projectType:"web"|"mobile";compact?:boolean}){return <div className={`project-placeholder ${projectType==="mobile"?"project-placeholder-mobile":""} ${compact?"min-h-56":"min-h-80"}`} role="img" aria-label={`${projectName} project preview placeholder; screenshot coming soon`}><div className={projectType==="web"?"browser-frame":"phone-frame"}><div className="placeholder-icon"><FontAwesomeIcon icon={projectType==="web"?faDisplay:faMobileScreenButton}/></div><p className="display mt-4 text-xl font-extrabold">{projectName}</p><p className="mt-1 text-xs font-extrabold uppercase tracking-[.16em] text-[var(--orange)]">Project Preview</p><p className="mt-3 text-sm text-[var(--muted)]">Screenshot coming soon</p></div></div>}

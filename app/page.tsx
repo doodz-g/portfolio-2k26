@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CaseStudies } from "@/components/CaseStudies";
 import { missingReceiptBug } from "@/data/qaArtifacts";
+import { FeaturedProjects } from "@/components/FeaturedProjects";
 
 const skillGroups=[
   ["Core testing",["Manual Testing","Exploratory Testing","Functional Testing","Regression Testing","Smoke Testing","End-to-End Testing","Integration Testing"]],
@@ -40,6 +41,8 @@ export default function Home(){return <><Header/><main id="top">
   </div></div></section>
 
   <section id="case-studies" className="section scroll-mt-16 bg-white"><div className="container"><div className="grid gap-6 lg:grid-cols-[1fr_.55fr] lg:items-end"><div><p className="eyebrow text-[var(--orange)]">Selected case studies</p><h2 className="display mt-6 text-5xl font-extrabold sm:text-7xl">QA thinking in practice.</h2></div><p className="leading-7 text-[var(--muted)]">Sanitized examples based on real types of work. Select a case study to see the problem, coverage, approach, risks, and outcome.</p></div><CaseStudies/></div></section>
+
+  <section id="projects" className="section scroll-mt-16"><div className="container"><div className="grid gap-6 lg:grid-cols-[1fr_.55fr] lg:items-end"><div><p className="eyebrow text-[var(--orange)]">Featured projects</p><h2 className="display mt-6 text-5xl font-extrabold sm:text-7xl">Building software makes me a better tester.</h2></div><p className="leading-7 text-[var(--muted)]">Personal products I&apos;ve built to stay close to engineering—from frontend behavior and APIs to authentication, data, permissions, and release workflows.</p></div><FeaturedProjects/></div></section>
 
   <section id="skills" className="section scroll-mt-16"><div className="container"><p className="eyebrow text-[var(--orange)]">Skills & tools</p><div className="mt-6 grid gap-6 lg:grid-cols-[.8fr_1.2fr]"><h2 className="display text-5xl font-extrabold sm:text-6xl">Coverage with structure.</h2><p className="max-w-2xl text-lg leading-8 text-[var(--muted)]">A practical toolkit for understanding changes, testing the right risks, and communicating results teams can act on.</p></div><div className="mt-12 grid gap-5 lg:grid-cols-3">{skillGroups.map(([title,items])=><article key={title as string} className="skill-card"><h3 className="display text-xl font-extrabold">{title}</h3><ul className="mt-5 space-y-3">{(items as string[]).map(item=><li key={item} className="flex gap-3 text-sm"><span className="text-[var(--orange)]">●</span>{item}</li>)}</ul></article>)}</div><h3 className="display mt-16 text-3xl font-extrabold">Tools & technologies</h3><div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">{tools.map(([title,items])=><article key={title as string} className="rounded-2xl border border-[var(--line)] bg-white p-5"><h4 className="text-xs font-extrabold uppercase tracking-[.14em] text-[var(--orange)]">{title}</h4><p className="mt-4 leading-7 text-[var(--muted)]">{(items as string[]).join(" / ")}</p></article>)}</div></div></section>
 

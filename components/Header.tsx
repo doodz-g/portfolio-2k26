@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
-const links = [["Home","top"],["About","about"],["Experience","experience"],["Case Studies","case-studies"],["Skills","skills"],["QA Artifact","qa-artifact"],["Contact","contact"]] as const;
+const links = [["Home","top"],["About","about"],["Experience","experience"],["Case Studies","case-studies"],["Projects","projects"],["Skills","skills"],["QA Artifact","qa-artifact"],["Contact","contact"]] as const;
 
 export function Header() {
   const pathname=usePathname();
