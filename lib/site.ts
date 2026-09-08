@@ -8,7 +8,7 @@ export const siteConfig = {
   // This fallback makes metadata work before a custom domain is connected.
   url: process.env.NEXT_PUBLIC_SITE_URL ?? (deploymentHost ? `https://${deploymentHost}` : "https://example.com"),
   email: "eduvigisgarcia88@gmail.com",
-  linkedin: "https://www.linkedin.com/",
+  linkedin: "https://www.linkedin.com/in/eduvigis-garcia/",
   github: "https://github.com/",
   resume: "/resume/Eduvigis-Garcia-Resume.pdf",
 } as const;
