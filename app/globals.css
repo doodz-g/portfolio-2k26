@@ -29,6 +29,9 @@ button { font:inherit; }
 .case-detail-container { width:min(860px,calc(100% - 40px)); margin-inline:auto; }
 .case-detail-section { padding:3rem 0; border-bottom:1px solid var(--line); }
 .case-detail-copy { max-width:760px; }
+.finding-card { border:1px solid var(--line); border-left-width:5px; border-radius:1rem; background:white; padding:clamp(1.25rem,3vw,2rem); }
+.finding-defect { border-left-color:var(--orange); }
+.finding-risk { border-left-color:#b08a16; }
 .detail-title { font-size:.72rem; font-weight:900; letter-spacing:.14em; text-transform:uppercase; color:var(--orange); }
 .check-list { display:grid; gap:.8rem; }
 .check-list li { position:relative; padding-left:1.75rem; line-height:1.6; }
